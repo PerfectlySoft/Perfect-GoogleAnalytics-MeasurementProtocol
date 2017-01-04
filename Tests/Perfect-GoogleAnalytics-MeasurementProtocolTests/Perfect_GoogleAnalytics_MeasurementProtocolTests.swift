@@ -3,7 +3,7 @@ import XCTest
 
 class Perfect_GoogleAnalytics_MeasurementProtocolTests: XCTestCase {
 	override func setUp() {
-		PerfectGAMeasurementProtocol.propertyid = "UA-45349601-5"
+		PerfectGAMeasurementProtocol.propertyid = "UA-XXXXXXXX-X"
 	}
 
 
