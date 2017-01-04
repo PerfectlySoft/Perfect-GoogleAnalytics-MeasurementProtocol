@@ -6,12 +6,19 @@
 //
 //
 
+/// Session indicators
 public enum PerfectGAEvent_SessionControl: String {
+	/// Session is starting
 	case start	= "start"
+
+	/// Session is ending
 	case end	= "end"
+
+	// Default. Neither starting nor ending
 	case none	= "none"
 }
 
+/// Enum describing Hit Type
 public enum PerfectGAEvent_HitType: String {
 	case pageview		= "pageview"
 	case screenview		= "screenview"

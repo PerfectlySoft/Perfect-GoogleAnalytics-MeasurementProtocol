@@ -19,11 +19,13 @@
 
 import PerfectLib
 
-
+/// App-wide preferences to store the property ID and hit type.
 public struct PerfectGAMeasurementProtocol {
 
+	/// Property ID
 	public static var propertyid = ""
-//	public static var clientid = ""
+
+	// Hit Type
 	public static var hitType = "pageview"
 
 	public init(){}

@@ -8,13 +8,17 @@
 
 
 // https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters
+
+/// Base type for a Google Analytics Event
 public class PerfectGAEvent {
 
+	/// Sets the property ID from the settings
 	public init(){
 		tid = PerfectGAMeasurementProtocol.propertyid
-
 	}
 
+
+	/// generates the URL Encoded string for the body of the request
 	public func generate() throws -> String {
 
 		do {
@@ -81,18 +85,43 @@ public class PerfectGAEvent {
 	*/
 	public var qt = 0
 
+	/// The User section of the event
 	public var user: UserData = UserData()
+
+	/// The Session section of the event
 	public var session: SessionData = SessionData()
+
+	/// The Traffic section of the event
 	public var traffic: TrafficData = TrafficData()
+
+	/// The System section of the event
 	public var system: SystemData = SystemData()
+
+	/// The Hit section of the event
 	public var hit: HitData = HitData()
+
+	/// The Content section of the event
 	public var content: ContentData = ContentData()
+
+	/// The App Tracking section of the event
 	public var appTracking: AppTrackingData = AppTrackingData()
+
+	/// The Event Tracking section of the event
 	public var eventTracking: EventTrackingData = EventTrackingData()
+
+	/// The Ecommerce section of the event
 	public var ecomm: EcommData = EcommData()
+
+	/// The Social section of the event
 	public var social: SocialData = SocialData()
+
+	/// The Timing section of the event
 	public var timing: TimingData = TimingData()
+
+	/// The Exception Handling section of the event
 	public var exeption: ExceptionsData = ExceptionsData()
+
+	/// The Content Experiment section of the event
 	public var contentExperiments: ContentExperimentData = ContentExperimentData()
 
 
@@ -751,6 +780,7 @@ public class PerfectGAEvent {
 	
 }
 
+/// Error type
 enum GAError: Error {
 	case tidEmpty
 	case cidEmpty
@@ -761,6 +791,8 @@ enum GAError: Error {
 	case timingTypeError
 }
 
+
+/// Generates the String using introspection.
 public class generateString {
 	func toStrings() -> [String] {
 		var out = [String]()
