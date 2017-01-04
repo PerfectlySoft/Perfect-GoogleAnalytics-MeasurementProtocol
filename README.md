@@ -48,6 +48,10 @@ do {
 
 ```
 
+## API Documentation
+
+For full API documentation please visit [https://www.perfect.org/docs/api-Perfect-GoogleAnalytics-MeasurementProtocol.html](https://www.perfect.org/docs/api-Perfect-GoogleAnalytics-MeasurementProtocol.html)
+
 ## Building
 
 Add this project as a dependency in your Package.swift file.
