@@ -11,3 +11,14 @@ public enum PerfectGAEvent_SessionControl: String {
 	case end	= "end"
 	case none	= "none"
 }
+
+public enum PerfectGAEvent_HitType: String {
+	case pageview		= "pageview"
+	case screenview		= "screenview"
+	case event			= "event"
+	case transaction	= "transaction"
+	case item			= "item"
+	case social			= "social"
+	case exception		= "exception"
+	case timing			= "timing"
+}

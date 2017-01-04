@@ -22,8 +22,9 @@ import PerfectLib
 
 public struct PerfectGAMeasurementProtocol {
 
-	private var version = 1
-	public var propertyid = ""
-	public var clientid = ""
-	public var hitType = "pageview"
+	public static var propertyid = ""
+//	public static var clientid = ""
+	public static var hitType = "pageview"
+
+	public init(){}
 }
