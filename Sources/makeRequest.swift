@@ -17,7 +17,6 @@
 import PerfectLib
 import PerfectCURL
 import cURL
-import SwiftString
 import Foundation
 
 
@@ -117,24 +116,34 @@ public class HTTPHeaderParser {
 
 				if (range == nil && $0.hasPrefix("HTTP/")) {
 					// except the first line, typically "HTTP/1.0 200 OK", so split it first
-					let http = $0.tokenize()
+					let http = tokenize($0)
 
 					// parse the tokens
-					_version = http[0].trimmed()
-					_code = http[1].toInt()!
-					_status = http[2].trimmed()
+					_version = trimmed(http[0])
+					_code = Int(http[1]) ?? 0
+					_status = trimmed(http[2])
 				} else {
 
 					// split the line into a dictionary item expression
 					//	let key = $0.left(range)
 					//	let val = $0.right(range).trimmed()
 					let key = $0.substring(to: (range?.upperBound)!)
-					let val = $0.substring(from: (range?.lowerBound)!).trimmed()
+					let val = trimmed($0.substring(from: (range?.lowerBound)!))
 
 					// insert or update the dictionary with this item
 					_dic.updateValue(val, forKey: key)
 				}
 		}
+	}
+
+
+	/// split the string into a string array by white spaces
+	func tokenize(_ str: String) -> [String] {
+		return str.components(separatedBy: .whitespaces)
+	}
+
+	func trimmed(_ str: String) -> String {
+		return str.trimmingCharacters(in: .whitespacesAndNewlines)
 	}
 
 	/// HTTP response header information by keywords
