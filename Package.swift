@@ -1,11 +1,11 @@
 // Generated automatically by Perfect Assistant Application
-// Date: 2016-12-21 21:43:53 +0000
+// Date: 2017-10-20 01:00:46 +0000
 import PackageDescription
 let package = Package(
-    name: "Perfect-GoogleAnalytics-MeasurementProtocol",
-    targets: [],
-    dependencies: [
-        .Package(url: "https://github.com/PerfectlySoft/Perfect-CURL.git", majorVersion: 2),
-        .Package(url: "https://github.com/PerfectlySoft/PerfectLib.git", majorVersion: 2),
-    ]
+	name: "Perfect-GoogleAnalytics-MeasurementProtocol",
+	targets: [],
+	dependencies: [
+		.Package(url: "https://github.com/PerfectlySoft/Perfect-CURL.git", majorVersion: 3),
+		.Package(url: "https://github.com/PerfectlySoft/PerfectLib.git", majorVersion: 3),
+	]
 )
