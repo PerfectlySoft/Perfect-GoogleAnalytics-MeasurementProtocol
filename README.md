@@ -8,7 +8,7 @@
 [![Perfect logo](http://www.perfect.org/github/Perfect_GH_button_4_slack.jpg)](http://perfect.ly)
 
 
-[![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Platforms OS X | Linux](https://img.shields.io/badge/Platforms-OS%20X%20%7C%20Linux%20-lightgray.svg?style=flat)](https://developer.apple.com/swift/)
 [![License Apache](https://img.shields.io/badge/License-Apache-lightgrey.svg?style=flat)](http://perfect.org/licensing.html)
 [![Twitter](https://img.shields.io/badge/Twitter-@PerfectlySoft-blue.svg?style=flat)](http://twitter.com/PerfectlySoft)
@@ -21,7 +21,7 @@ This project provides a Swift interface to the [Google Analytics Measurement Pro
 
 This package builds with Swift Package Manager and is part of the [Perfect](https://github.com/PerfectlySoft/Perfect) project.
 
-Ensure you have installed and activated the latest Swift 3 tool chain.
+Ensure you have installed and activated the latest Swift 4 tool chain.
 
 
 ## Example usage:
@@ -57,7 +57,7 @@ For full API documentation please visit [https://www.perfect.org/docs/api-Perfec
 Add this project as a dependency in your Package.swift file.
 
 ``` swift
-.Package(url: "https://github.com/PerfectlySoft/Perfect-GoogleAnalytics-MeasurementProtocol.git", majorVersion: 0)
+.Package(url: "https://github.com/PerfectlySoft/Perfect-GoogleAnalytics-MeasurementProtocol.git", majorVersion: 3)
 ```
 
 ## Issues
