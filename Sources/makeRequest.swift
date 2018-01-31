@@ -83,7 +83,7 @@ extension PerfectGAEvent {
 		let http = HTTPHeaderParser(header:headerStr!)
 
 		// assamble the body from a binary byte array to a string
-		let content = String(bytes:bodyIn, encoding:String.Encoding.utf8)
+		let _ = String(bytes:bodyIn, encoding:String.Encoding.utf8)
 
 		// prepare the failsafe content.
 		raw = ["status": http.status, "header": headerStr!]
